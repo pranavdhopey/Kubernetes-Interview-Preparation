@@ -1,6 +1,6 @@
 # Understanding Kubernetes Services: How Applications Discover and Communicate with Each Other
 
-*DevOps Interview Preparation | Question 3*
+*Kubernetes · DevOps Interview Preparation · Question 3*
 
 Pods can be replaced, and replacement Pods may have different IP addresses. Kubernetes Services provide a stable way for one application to reach another without tracking every Pod IP.
 
@@ -48,6 +48,8 @@ Traffic is **not guaranteed to follow round-robin order** in every Kubernetes cl
 
 ### 3.5. How Can You Explain the Role of Kubernetes Services in a DevOps Interview?
 
+**Interview-ready answer**
+
 > A Kubernetes Service provides a stable endpoint for a group of Pods. Because Pods are temporary and their IP addresses may change, applications should use a Service name instead of a hardcoded Pod IP. The Service uses selectors to identify matching backend Pods, and Kubernetes maintains the eligible endpoints. When multiple replicas are available, Service networking can distribute traffic among them. This supports service discovery and more reliable application communication.
 
 ### 3.6. What Are the Most Important Concepts to Remember About Kubernetes Services?
@@ -61,3 +63,12 @@ Traffic is **not guaranteed to follow round-robin order** in every Kubernetes cl
 | Availability limitation | A Service cannot serve requests if no usable backends exist |
 
 **Quick revision:** Service = stable endpoint + discovery + traffic distribution. It improves reliability but does not guarantee uninterrupted requests.
+
+
+## Key Takeaways
+
+- A Service gives clients a stable way to reach backend Pods.
+- Service discovery avoids hardcoded, changing Pod addresses.
+- Labels and selectors identify eligible backends.
+- Traffic can be distributed across available replicas.
+- Services improve connectivity but do not guarantee zero downtime.

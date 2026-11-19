@@ -1,6 +1,6 @@
 # Kubernetes Architecture Made Simple: Understanding the Control Plane and Worker Nodes
 
-*DevOps Interview Preparation | Question 1*
+*Kubernetes · DevOps Interview Preparation · Question 1*
 
 Kubernetes runs containerized applications across a cluster of machines. To understand its architecture, it helps to separate the components that manage the cluster from those that execute applications.
 
@@ -36,6 +36,17 @@ The components do not simply pass a request directly down a chain. They observe 
 
 ### 1.4. How Can You Describe Kubernetes Architecture Clearly During a DevOps Interview?
 
+**Interview-ready answer**
+
 > Kubernetes has a control plane and worker nodes. The control plane includes the API Server, Scheduler, etcd, and Controller Manager. Worker nodes run Kubelet, a container runtime, and commonly kube-proxy. When I create a Deployment, the API Server accepts the configuration, controllers create the necessary Pods, the Scheduler selects nodes, and Kubelet uses the runtime to start containers. etcd stores cluster state, and controllers keep working to maintain the desired configuration.
 
 **Quick revision:** Control plane = API Server, Scheduler, etcd, Controller Manager. Worker node = Kubelet, container runtime, kube-proxy.
+
+
+## Key Takeaways
+
+- The control plane manages desired state and cluster-wide decisions.
+- The API Server is the main entry point for cluster operations.
+- etcd stores Kubernetes resource state.
+- Worker nodes use Kubelet and a container runtime to run Pods.
+- Controllers and the Scheduler help place and maintain workloads.

@@ -1,7 +1,8 @@
 # Kubernetes Headless Services: When and Why Should You Use Them?
 
-> **Kubernetes Interview Preparation — Question 7**  
-> Topic: Service discovery for stateful workloads
+*Kubernetes · DevOps Interview Preparation · Question 7*
+
+Topic: Service discovery for stateful workloads
 
 ## How Does a Headless Service Help Applications Reach Specific Pods?
 
@@ -53,8 +54,14 @@ Headless Services are particularly useful for StatefulSets, database clusters, a
 
 ## What Is a Strong Interview Answer?
 
+**Interview-ready answer**
+
 > A headless Service is a Kubernetes Service configured with `clusterIP: None`. Unlike a standard ClusterIP Service, it does not allocate a virtual Service IP. Instead, DNS can expose the addresses of the underlying endpoints. This is helpful for StatefulSets and databases when applications need to discover or connect to specific Pods rather than rely on normal Service-level traffic distribution.
 
-## Key Takeaway
+## Key Takeaways
 
-Use a standard Service when clients can talk to any suitable backend. Consider a headless Service when clients need to discover individual instances.
+- A headless Service uses `clusterIP: None`.
+- It has no virtual ClusterIP for normal Service-level load balancing.
+- DNS can expose individual backend endpoint addresses.
+- StatefulSets can provide stable per-Pod DNS names.
+- Headless Services do not solve database replication or consistency.

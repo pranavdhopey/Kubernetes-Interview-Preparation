@@ -1,7 +1,8 @@
 # Can Kubernetes Pods Communicate with Services in Other Namespaces?
 
-> **Kubernetes Interview Preparation — Question 8**  
-> Topic: Cross-namespace Service discovery
+*Kubernetes · DevOps Interview Preparation · Question 8*
+
+Topic: Cross-namespace Service discovery
 
 ## Can a Pod Reach a Service in a Different Kubernetes Namespace?
 
@@ -35,8 +36,14 @@ Not necessarily. **NetworkPolicies**, service-mesh rules, firewall settings, and
 
 ## What Is a Strong Interview Answer?
 
+**Interview-ready answer**
+
 > Yes, a Pod can normally reach a Kubernetes Service in another namespace. I would use the Service's DNS name in the form `<service-name>.<namespace>.svc.cluster.local`, rather than hardcode its ClusterIP. Namespace boundaries do not automatically block traffic, although NetworkPolicies and other networking controls can restrict access.
 
-## Key Takeaway
+## Key Takeaways
 
-For cross-namespace traffic, use a namespace-qualified Service DNS name and verify the applicable networking policies.
+- Pods can usually reach Services in other namespaces.
+- Use `<service>.<namespace>.svc.cluster.local` for explicit DNS lookup.
+- Prefer Service DNS names over hardcoded ClusterIPs.
+- Namespaces do not automatically isolate network traffic.
+- NetworkPolicies and other controls can restrict communication.

@@ -1,7 +1,8 @@
 # Kubernetes Service Types Explained: Choosing the Right Way to Access Your Applications
 
-> **DevOps Interview Preparation — Question 5**  
-> Learn how ClusterIP, NodePort, LoadBalancer, ExternalName, and headless Services differ, with practical examples and an interview-ready answer.
+*Kubernetes · DevOps Interview Preparation · Question 5*
+
+Learn how ClusterIP, NodePort, LoadBalancer, ExternalName, and headless Services differ, with practical examples and an interview-ready answer.
 
 ## 1. How Do Different Kubernetes Service Types Control Access to Applications?
 
@@ -127,6 +128,8 @@ spec:
 
 ## 8. How Would You Explain Kubernetes Service Types in a DevOps Interview?
 
+**Interview-ready answer**
+
 > Kubernetes provides several Service types that determine how an application can be accessed.
 >
 > **ClusterIP** is used for internal communication inside the cluster. **NodePort** makes a Service available through a port on the nodes, as long as the client can reach those nodes. **LoadBalancer** uses supported infrastructure to provide an external load-balancer endpoint.
@@ -138,3 +141,14 @@ spec:
 > I would choose the Service configuration based on whether the application needs internal access, node-level access, external exposure, or individual endpoint discovery.
 
 ---
+
+**Suggested Medium tags:** Kubernetes · DevOps · Kubernetes Networking · Cloud Native · Interview Preparation  
+**Suggested GitHub filename:** `05-kubernetes-service-types.md`
+
+## Key Takeaways
+
+- ClusterIP supports internal cluster communication.
+- NodePort exposes a port on nodes to reachable clients.
+- LoadBalancer depends on supported infrastructure for an external endpoint.
+- ExternalName creates a DNS alias rather than proxying to Pods.
+- Headless Services enable endpoint discovery without a virtual ClusterIP.

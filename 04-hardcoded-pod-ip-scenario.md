@@ -1,6 +1,6 @@
 # A Kubernetes Networking Mistake: Why Hardcoded Pod IPs Can Break Your Application
 
-*DevOps Interview Preparation | Question 4*
+*Kubernetes · DevOps Interview Preparation · Question 4*
 
 A frontend may communicate with a backend successfully in a test cluster, yet still be configured in a way that is fragile in staging or production. One common example is putting a backend Pod's IP address directly into the frontend's environment variables.
 
@@ -72,6 +72,8 @@ This is especially valuable in staging and production, where deployments and Pod
 
 ### 4.6. How Should You Respond to This Kubernetes Networking Scenario in a DevOps Interview?
 
+**Interview-ready answer**
+
 > I would explain that a Pod IP is not a dependable long-term address because Pods can be deleted or replaced and the replacement may receive a different IP. If the frontend hardcodes the backend Pod's address, requests can fail after such a change. I would recommend a Kubernetes Service for the backend and configure the frontend to use its Service DNS name. The Service selector identifies the appropriate backend Pods, and Kubernetes updates the eligible endpoints as Pods change. This reduces configuration maintenance and makes communication more reliable, although it cannot prevent every outage.
 
 ### 4.7. What Are the Practical Differences Between Using a Pod IP Address and a Kubernetes Service?
@@ -84,3 +86,12 @@ This is especially valuable in staging and production, where deployments and Pod
 | Fragile for changing workloads | Better suited to dynamic applications |
 
 **Quick revision:** Do not hardcode a backend Pod IP in a frontend configuration. Use a Service name so that Pod replacement does not require updating the frontend's destination.
+
+
+## Key Takeaways
+
+- Pod IP addresses can change when Pods are replaced.
+- Hardcoded IPs can break frontend-to-backend communication.
+- A Service provides a stable DNS name for clients.
+- Selectors let the Service track matching backend Pods.
+- Using Services reduces manual configuration updates.

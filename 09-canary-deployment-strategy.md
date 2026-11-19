@@ -1,7 +1,8 @@
 # How Do You Roll Out a New Application Version Safely? Canary Deployment Explained
 
-> **Kubernetes Interview Preparation — Question 9**  
-> Topic: Production release strategies
+*Kubernetes · DevOps Interview Preparation · Question 9*
+
+Topic: Production release strategies
 
 ## Which Deployment Strategy Would You Choose for a Production Application?
 
@@ -48,10 +49,16 @@ Traffic should only be increased when the new version meets the team's release c
 
 ## What Is a Strong Interview Answer?
 
+**Interview-ready answer**
+
 > For a production service, I would consider a canary deployment to reduce release risk. I would run the new version alongside the existing version and initially direct around 10% of traffic to it. After checking error rates, performance, and user impact, I would gradually increase traffic to 20%, 50%, and finally 100%. In Kubernetes, this can be implemented with an Ingress controller or another traffic-management solution that supports weighted routing. If the canary fails, I would route traffic back to the stable version.
 
 **Interview integrity note:** Describe this as a strategy you would use unless you have actually implemented it in your organization. Do not claim experience you do not have.
 
-## Key Takeaway
+## Key Takeaways
 
-Canary deployments make production releases safer by exposing a new version gradually, observing its behavior, and retaining a path to roll back.
+- Canary releases expose a new version to a small share of traffic first.
+- Monitor errors, latency, and user impact before increasing traffic.
+- Gradually increase exposure when the release is healthy.
+- Weighted routing requires a compatible Ingress controller or other solution.
+- Rollback by returning traffic to the stable version when needed.

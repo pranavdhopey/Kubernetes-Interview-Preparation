@@ -1,6 +1,6 @@
 # Behind the Scenes of Kubernetes: What Happens When You Create a Pod?
 
-*DevOps Interview Preparation | Question 2*
+*Kubernetes · DevOps Interview Preparation · Question 2*
 
 Running a `kubectl` command may take only a moment, but several Kubernetes components participate in turning a Pod specification into a running workload.
 
@@ -47,6 +47,17 @@ For controller-managed workloads, controllers keep reconciling the desired and a
 
 ### 2.6. How Can You Explain the Complete Pod Creation Process in a Technical Interview?
 
+**Interview-ready answer**
+
 > When I apply a Pod manifest, the API Server authenticates, authorizes, and validates the request, then stores the resource state in etcd. The Scheduler evaluates eligible nodes and assigns one. Kubelet on that node sees the assignment and uses the container runtime to start the containers. Kubelet reports status through the API Server. If the Pod belongs to a managed workload, controllers help maintain the desired number of Pods.
 
 **Quick revision:** `kubectl` → API Server → stored Pod → Scheduler assigns node → Kubelet → container runtime. etcd stores state; controllers reconcile managed workloads.
+
+
+## Key Takeaways
+
+- kubectl submits resource requests through the API Server.
+- The API Server validates requests and stores resource state in etcd.
+- The Scheduler selects a suitable node for an unscheduled Pod.
+- Kubelet and the container runtime start containers on the chosen node.
+- Controllers maintain desired state for managed workloads.
