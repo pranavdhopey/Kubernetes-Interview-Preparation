@@ -34,7 +34,3 @@ Each article uses a consistent pattern:
 5. Five bullet-point key takeaways.
 
 The depth of examples varies by topic: architecture requires a component walkthrough, while Service types and labels benefit from YAML examples.
-
-## Publication Note
-
-These articles are rewritten learning materials based on the provided transcripts. Kubernetes terminology remains standard for accuracy. Rewording does not guarantee copyright clearance or a particular plagiarism score; verify originality and any externally sourced material before publication.
