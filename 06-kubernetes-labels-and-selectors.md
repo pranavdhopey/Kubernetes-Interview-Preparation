@@ -98,6 +98,3 @@ A useful way to remember the distinction is that **a label is attached to the re
 - Labels and selectors avoid tying workload management to individual Pod names or changing IP addresses.
 
 ---
-
-**Suggested Medium tags:** Kubernetes · DevOps · Kubernetes Labels · Kubernetes Selectors · Interview Preparation  
-**Suggested GitHub filename:** `06-kubernetes-labels-and-selectors.md`

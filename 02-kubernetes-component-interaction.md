@@ -50,5 +50,3 @@ For controller-managed workloads, controllers keep reconciling the desired and a
 > When I apply a Pod manifest, the API Server authenticates, authorizes, and validates the request, then stores the resource state in etcd. The Scheduler evaluates eligible nodes and assigns one. Kubelet on that node sees the assignment and uses the container runtime to start the containers. Kubelet reports status through the API Server. If the Pod belongs to a managed workload, controllers help maintain the desired number of Pods.
 
 **Quick revision:** `kubectl` → API Server → stored Pod → Scheduler assigns node → Kubelet → container runtime. etcd stores state; controllers reconcile managed workloads.
-
-**Tags:** Kubernetes, DevOps, Pod Lifecycle, Kubernetes Scheduler, Interview Preparation

@@ -84,5 +84,3 @@ This is especially valuable in staging and production, where deployments and Pod
 | Fragile for changing workloads | Better suited to dynamic applications |
 
 **Quick revision:** Do not hardcode a backend Pod IP in a frontend configuration. Use a Service name so that Pod replacement does not require updating the frontend's destination.
-
-**Tags:** Kubernetes, DevOps, Kubernetes Networking, Scenario-Based Interview, Service Discovery

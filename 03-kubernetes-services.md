@@ -61,5 +61,3 @@ Traffic is **not guaranteed to follow round-robin order** in every Kubernetes cl
 | Availability limitation | A Service cannot serve requests if no usable backends exist |
 
 **Quick revision:** Service = stable endpoint + discovery + traffic distribution. It improves reliability but does not guarantee uninterrupted requests.
-
-**Tags:** Kubernetes, DevOps, Kubernetes Services, Service Discovery, Interview Preparation

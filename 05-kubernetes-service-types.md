@@ -138,6 +138,3 @@ spec:
 > I would choose the Service configuration based on whether the application needs internal access, node-level access, external exposure, or individual endpoint discovery.
 
 ---
-
-**Suggested Medium tags:** Kubernetes · DevOps · Kubernetes Networking · Cloud Native · Interview Preparation  
-**Suggested GitHub filename:** `05-kubernetes-service-types.md`
