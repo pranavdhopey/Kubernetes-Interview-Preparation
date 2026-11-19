@@ -1,6 +1,6 @@
-# Kubernetes Interview Preparation — Questions 1–9
+# Kubernetes Interview Preparation — Questions 1–12
 
-A practical, beginner-friendly series of Kubernetes and DevOps interview questions based on nine supplied transcripts. Each article contains a reframed interview question, a clear explanation, practical examples where relevant, an **interview-ready answer**, and **five key takeaways** for revision.
+A practical, beginner-friendly series of Kubernetes and DevOps interview questions based on twelve supplied transcripts. Each article contains a reframed interview question, a clear explanation, practical examples where relevant, an **interview-ready answer**, and **five key takeaways** for revision.
 
 ## Interview Questions
 
@@ -15,6 +15,9 @@ A practical, beginner-friendly series of Kubernetes and DevOps interview questio
 | 07 | When should you use a headless Service? | [Read Q07](07-kubernetes-headless-services.md) |
 | 08 | How can a Pod access a Service in another namespace? | [Read Q08](08-cross-namespace-service-communication.md) |
 | 09 | How would you roll out a new production version using a canary strategy? | [Read Q09](09-canary-deployment-strategy.md) |
+| 10 | How does CoreDNS resolve Kubernetes Service names? | [Read Q10](10-kubernetes-coredns.md) |
+| 11 | Can a Pod be scheduled on a node with a `NoSchedule` taint? | [Read Q11](11-kubernetes-taints-and-tolerations.md) |
+| 12 | How do liveness and readiness probes differ? | [Read Q12](12-kubernetes-liveness-vs-readiness-probes.md) |
 
 ## How to Use This Repository
 
@@ -32,3 +35,6 @@ Each article uses a consistent pattern:
 
 The depth of examples varies by topic: architecture requires a component walkthrough, while Service types and labels benefit from YAML examples.
 
+## Publication Note
+
+These articles are rewritten learning materials based on the provided transcripts. Kubernetes terminology remains standard for accuracy. Rewording does not guarantee copyright clearance or a particular plagiarism score; verify originality and any externally sourced material before publication.
